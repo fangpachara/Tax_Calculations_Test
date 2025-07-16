@@ -1,0 +1,51 @@
+nav{
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-bottom: 3px solid #292a2b;
+}
+
+.container {
+    display: responsive;
+}
+
+.taxall{
+    padding: 30px;
+    border: 1px solid #292a2b;
+    border-radius: 10px;
+}
+
+.texth{
+    font-size: 50px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+/* type radio filing */
+.radio-option {
+    display: flex;
+    align-items: center;
+    
+
+}
+input[type="radio"] {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* VAT Mount */
+.form-select {
+    width: 20%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #292a2b;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #292a2b;
+    
+}
