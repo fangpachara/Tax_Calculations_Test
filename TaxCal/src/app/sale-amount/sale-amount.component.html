@@ -1,0 +1,2 @@
+<input type="text" class="form-control text-end" placeholder = "THB" 
+        [(ngModel)] = "value" mask="separator.2" thousandSeparator="," (ngModelChange) = "valueChange.emit(value)" (blur)="onBlur()">

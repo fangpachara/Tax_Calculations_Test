@@ -1,0 +1,12 @@
+/* type radio filing */
+.radio-option {
+    display: flex;
+    align-items: center;
+    
+
+}
+input[type="radio"] {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
