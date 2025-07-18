@@ -81,6 +81,17 @@ export class TaxworkComponent {
   }
 
 
+  submitTax(): void {
+  console.log("📦 Tax Data Model:", this.TaxData);
+
+  // เช็คก่อนว่า jQuery และ modal ถูกโหลดจริง
+  const modal = document.getElementById('jsonModal');
+  if (modal) {
+    ($('#jsonModal') as any).modal('show');
+  } else {
+    console.error("❌ ไม่พบ modal id='jsonModal' ใน DOM");
+  }
+}
 
 
 }

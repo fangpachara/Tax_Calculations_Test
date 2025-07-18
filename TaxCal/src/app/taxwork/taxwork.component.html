@@ -149,9 +149,25 @@
         </div>
         <button class="btn btn-secondary" (click)="onBack()">Back</button>
         <div>
-            <button class="btn btn-dark">Confirm and Submit</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Confirm and Submit</button>
         </div>
     </div>
+</div>
+
+<div class="modal fade" id="jsonModal" tabindex="-1" role="dialog" aria-labelledby="jsonModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre>{{ TaxData | json }}</pre>
+      </div>
+    </div>
+  </div>
 </div>
 
 
