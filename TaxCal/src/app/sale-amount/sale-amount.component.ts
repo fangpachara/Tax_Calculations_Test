@@ -24,9 +24,9 @@ export class SaleAmountComponent {
 
 
   onBlur(){
-    const raw = new Decimal(this.value.replace(/,/g, '')||'0')
-    const tax = raw.mul(0.07).toDecimalPlaces(3);
-    this.taxAmountChange.emit(+tax)
+    const raw = parseFloat((this.value +'').replace(/,/g, '')||'0')
+    const tax = Math.round(raw*0.07*1000)/1000
+    this.taxAmountChange.emit(tax)
   }
 
 

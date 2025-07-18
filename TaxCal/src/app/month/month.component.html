@@ -1,4 +1,4 @@
 <select class="form-select ml-3" [value]="value" (change)="onChange($event)">
     <option value="">-- Select Month --</option>
-    <option *ngFor="let i of months" [value] ="i.value" [disabled] ="isDisabled(i.number)">{{i.label}}</option>
+    <option *ngFor="let i of months" [value] ="i.label" [disabled] ="isDisabled(i.number)">{{i.label}}</option>
 </select>

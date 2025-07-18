@@ -41,7 +41,7 @@ export class MonthComponent {
   isDisabled(monthNum: number): boolean {
     const selectYear = +this.year
     const currentYear = new Date().getFullYear()
-    const currentMonth = new Date().getFullYear()+1
+    const currentMonth = new Date().getMonth()+1
 
     if(!selectYear) return true
 
