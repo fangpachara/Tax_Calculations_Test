@@ -3,17 +3,17 @@
         <h2>RD | SVE</h2>
     </div>
     <div class="nav-items col-md-6 d-flex justify-content-end">
-        <label>Time in Thailand: 15:57 (GMT+7) | 1st October 2021</label>
+        <p>Time in Thailand: 15:57 (GMT+7) | 1st October 2021</p>
         <i class="bi bi-person-circle mr-2 ml-3"></i>
-        <label>Lorem Co Ltd.</label>
+        <p>Lorem Co Ltd.</p>
         <i class="bi bi-caret-down-fill ml-2"></i>
     </div>
 </nav>
 <div class="container" *ngIf="!showReview">
-    <label class="texth d-flex justify-content-center">Submit Tax Filing</label>
+    <p class="texth d-flex justify-content-center">Submit Tax Filing</p>
     <div>
         <i class="bi bi-1-circle">
-        </i><label>Input Detail</label>
+        </i><p>Input Detail</p>
     </div>
 
     <div class="taxall">
@@ -25,15 +25,15 @@
 
         <div class="mb-4">
             <div>
-                <label>VAT Month</label>
+                <p>VAT Month</p>
                 <app-month [(value)]="TaxData.month" [year]="TaxData.year"></app-month>
             </div>
             <div>
-                <label>VAT Month</label>
+                <p>VAT Month</p>
                 <app-year [(value)]="TaxData.year"></app-year>
             </div>
             <div class="form-group mb-3" *ngIf="changeFiling">
-                <label>Type</label>
+                <p>Type</p>
                 <select class="form-select ml-3" [(ngModel)]="TaxData.Type">
                     <option value="">--Select Type --</option>
                     <option value="on-Time">on-Time</option>
@@ -46,10 +46,10 @@
             <a class="d-flex justify-content-end" href="#">View Exchange Rate</a>
         </div>
         <hr />
-        <label class="mb-4">Provide total value taxable electronic service</label><span class="text-danger">*</span>
+        <p class="mb-4">Provide total value taxable electronic service</p><span class="text-danger">*</span>
         <div class="row align-items-center mb-4 ml-2">
             <div class="col-md-9">
-                <label>1.Total value of taxable electronic service exclusive of VAT</label>
+                <p>1.Total value of taxable electronic service exclusive of VAT</p>
             </div>
             <div class="col-md-3 d-flex justify-content-end">
                 <app-sale-amount [(value)]="TaxData.saleAmount"
@@ -58,7 +58,7 @@
         </div>
         <div class="row align-items-center mb-4 ml-2">
             <div class="col-md-9">
-                <label>2.Total VAT to be remitted (7% of 1.)</label>
+                <p>2.Total VAT to be remitted (7% of 1.)</p>
 
             </div>
             <div class="col-md-3">
@@ -71,7 +71,7 @@
         <div *ngIf="changeFiling">
             <p>In case of late filing and payment, or additional filing</p>
             <div class="row align-items-center mb-4 ml-2">
-                <label class="col-md-9">3.Surcharge</label>
+                <p class="col-md-9">3.Surcharge</p>
                 <div class="input-group col-md-3">
                     <app-surcharge [taxAmount]="TaxData.taxAmount"
                         (surchargeChange)="onSurCharge($event)"></app-surcharge>
@@ -79,14 +79,14 @@
             </div>
 
             <div class="row align-items-center mb-4 ml-2">
-                <label class="col-md-9">4.Pentalty</label>
+                <p class="col-md-9">4.Pentalty</p>
                 <div class="input-group col-md-3">
                     <app-penalty (penaltyChange)="onPenaltyChange($event)"></app-penalty>
                 </div>
             </div>
 
             <div class="row align-items-center mb-4 ml-2">
-                <label class="col-md-9">5.Total amount of VAT, surcharge, and pentalty of be remitted (2.+3.+4.)</label>
+                <p class="col-md-9">5.Total amount of VAT, surcharge, and pentalty of be remitted (2.+3.+4.)</p>
                 <div class="input-group col-md-3">
                     <app-total-amount [taxAmount]="TaxData.taxAmount" [surcharge]="TaxData.surcharge"
                         [penalty]="TaxData.penalty" (totalChange)="onTotalAmountChange($event)"></app-total-amount>
@@ -102,10 +102,10 @@
 </div>
 
 <div *ngIf="showReview">
-    <label class="texth d-flex justify-content-center">Submit Tax Filing</label>
+    <p class="texth d-flex justify-content-center">Submit Tax Filing</p>
     <div>
         <i class="bi bi-1-circle">
-        </i><label>Input Detail</label>
+        </i><p>Input Detail</p>
     </div>
 
     <div class="taxall">
@@ -114,18 +114,18 @@
 
         <div class="mb-4">
             <div>
-                <label> Type Of Filing</label>
-                <label  class="ml-2">{{ TaxData.filingType === '1' ? 'Additional Filing' : 'Ordinary Filing' }}</label>
+                <p> Type Of Filing</p>
+                <p class="ml-2">{{ TaxData.filingType === '1' ? 'Additional Filing' : 'Ordinary Filing' }}</p>
             </div>
             <div>
-                <label>VAT Month</label>
-                <label class="ml-3"> {{ TaxData.month }} {{ TaxData.year }} </label>
+                <p>VAT Month</p>
+                <p class="ml-3"> {{ TaxData.month }} {{ TaxData.year }} </p>
             </div>
             <h2 class="">Tax Computation</h2>
             <hr />
             <div class="d-flex justify-content-between mt-3">
                 <span><strong>Total value of taxable electronic service exclusive of VAT</strong></span>
-                <label>{{ TaxData.saleAmount | number:'1.2-2' }} &nbsp;&nbsp;THB</label>
+                <p>{{ TaxData.saleAmount | number:'1.2-2' }} &nbsp;&nbsp;THB</p>
             </div>
             <div class="d-flex justify-content-between mt-3">
                 <span>
